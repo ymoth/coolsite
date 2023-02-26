@@ -1,0 +1,23 @@
+{% extends 'women/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link type="text/css" href="{% static 'women/css/reg_auth.css' %}" rel="stylesheet"/>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h3 style="text-align: center;">Войти в аккаунт</h3>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-error">{{ form.non_field_errors }}</div>
+            {% for f in form %}
+                <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }}</p>
+                <div class="form-error">{{ f.errors }}</div>
+            {% endfor %}
+
+            <button type="submit" class="sumbit_registration">Войти</button>
+        </form>
+    </div>
+
+{% endblock content %}

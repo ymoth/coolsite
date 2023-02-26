@@ -1,0 +1,55 @@
+.container {
+    width: 450px;
+    height: 638px;
+    background: #343a43 !important;
+    border-radius: 5%;
+    box-shadow: #0000006e 0px 2px 30px 1px;
+    margin: auto;
+}
+
+.form-error ul {
+    list-style: none;
+    padding: 0;
+    color: #ffffff;
+}
+
+
+.errorlist {
+    width: 500px;
+    height: 50px;
+    background: #343a43;
+    border-radius: 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.container * {
+    margin-left: 30px;
+}
+
+.container h1, h2, h3, p {
+    color: white;
+    margin-top: 40px;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+
+.sumbit_registration {
+    width: 162px;
+    height: 47px;
+    color: #000000;
+    background: #fdc073;
+    font-family: math;
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.container input {
+    width: 300px;
+    height: 35px;
+    text-align: center;
+
+    border-radius: 10px;
+}
