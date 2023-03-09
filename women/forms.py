@@ -56,7 +56,7 @@ class RegisterUserForm(UserCreationForm):
 
     def clean_email(self):
         if User.objects.filter(email=self.cleaned_data['email']) is not None:
-            raise ValidationError('Данный пользователь уже зарегистрирован по данной почте.')
+            raise ValidationError('Пользователь уже зарегистрирован по данной почте.')
         return self.cleaned_data['email']
 
 
