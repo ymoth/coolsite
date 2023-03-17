@@ -1,0 +1,60 @@
+{% extends 'women/base.html' %}
+
+{% block content %}
+    <ul class="list-articles">
+        <div class="artist">
+            <div class="article-panel">
+                <p class="first">Категория: Музыканты</p>
+                <p class="last">Дата: 31.02.2004</p>
+            </div>
+            <p>
+            <h2 class="username">Игорь Неживых</h2>
+            <img class="img-article-left thumb"
+                 src="https://sun9-29.userapi.com/impg/jaMLjAzAK2QdlMzXmHFED1pOHEdziovLPM05BQ/fz290mSjUlI.jpg?size=2560x2560&quality=95&sign=d10313bc0f66955585be7e99a116c7a8&type=album">
+            </p>
+            <p>
+                Несколько месяцев назад скачал от нечего делать с торрентов архив прессы. Распаковал его и ткнул в
+                произвольную статью. Этой статьей оказалась заметка от середины июля 2004 о пропаже питерского
+                журналиста Максима Максимова. И что-то у меня в памяти вспыхнуло от сочетания этого имени и фамилии,
+                набрал запрос в яндексе и по фотке сразу же узнал его.
+
+                Десять лет назад я на протяжении пары недель посещал по некоторым делам агентство журналистских
+                расследований, где пересекался, в частности, с Максимом Леонидовичем. Очень мне он показался приятным и
+                интеллигентным человеком.
+            </p>
+            {% autoescape on %}
+                {{ p.content|linebreaks|truncatewords:50 }}
+            {% endautoescape %}
+            <div class="clear"></div>
+            <p class="link-read-post"><a href="{{ p.get_absolute_url }}">Читать пост</a></p>
+            </li>
+        </div>
+            <div class="artist">
+            <div class="article-panel">
+                <p class="first">Категория: Музыканты</p>
+                <p class="last">Дата: 31.02.2004</p>
+            </div>
+            <p>
+            <h2 class="username">Игорь Неживых</h2>
+            <img class="img-article-left thumb"
+                 src="https://sun9-29.userapi.com/impg/jaMLjAzAK2QdlMzXmHFED1pOHEdziovLPM05BQ/fz290mSjUlI.jpg?size=2560x2560&quality=95&sign=d10313bc0f66955585be7e99a116c7a8&type=album">
+            </p>
+            <p>
+                Несколько месяцев назад скачал от нечего делать с торрентов архив прессы. Распаковал его и ткнул в
+                произвольную статью. Этой статьей оказалась заметка от середины июля 2004 о пропаже питерского
+                журналиста Максима Максимова. И что-то у меня в памяти вспыхнуло от сочетания этого имени и фамилии,
+                набрал запрос в яндексе и по фотке сразу же узнал его.
+
+                Десять лет назад я на протяжении пары недель посещал по некоторым делам агентство журналистских
+                расследований, где пересекался, в частности, с Максимом Леонидовичем. Очень мне он показался приятным и
+                интеллигентным человеком.
+            </p>
+            {% autoescape on %}
+                {{ p.content|linebreaks|truncatewords:50 }}
+            {% endautoescape %}
+            <div class="clear"></div>
+            <p class="link-read-post"><a href="{{ p.get_absolute_url }}">Читать пост</a></p>
+            </li>
+        </div>
+    </ul>
+{% endblock %}

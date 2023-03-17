@@ -3,6 +3,18 @@ from django.views.decorators.cache import cache_page
 
 from .views import *
 
+
+# WomenHome.as_view()
+
+
+async def slider(request: HttpRequest) -> str:
+    return render(request, 'women/slider.html')
+
+
+async def test(request: HttpRequest) -> str:
+    return render(request, 'women/test.html')
+
+
 urlpatterns = [
     path('', WomenHome.as_view(), name='home'),
     path('about/', about, name='about'),
@@ -13,4 +25,6 @@ urlpatterns = [
     path('register/', RegisterUser.as_view(), name='register'),
     path('post/<slug:post_slug>/', ShowPost.as_view(), name='post'),
     path('category/<slug:cat_slug>/', WomenCategory.as_view(), name='category'),
+    path('slider/', slider, name='slider'),
+    path('test/', test, name='test')
 ]
